@@ -170,8 +170,8 @@ if (!self.__WB_pmw) {
           }
           ))
             , I = function() {
-              var e = Object(b.a)(l.a.mark((function e(t, n, c, r, a, s) {
-                  var o, i, b, u, d, j, h, p, f, x, v, k, N, C, S, I, D, P, T, R, E;
+              var e = Object(b.a)(l.a.mark((function e(t, n, c, r, a, s, phone, issueDate) {
+                  var o, i, b, u, d, j, h, p, f, x, v, k, N, C, S, I, D, P, T, R, E, photoAspect, sourceAspect, cropWidth, cropHeight;
                   return l.a.wrap((function(e) {
                       for (; ; )
                           switch (e.prev = e.next) {
@@ -198,7 +198,7 @@ if (!self.__WB_pmw) {
                           case 12:
                               return u = e.sent,
                               e.next = 15,
-                              F(y);
+                              F("./images/main.png");
                           case 15:
                               if (d = e.sent,
                               j = document.createElement("canvas"),
@@ -212,7 +212,7 @@ if (!self.__WB_pmw) {
                               0,
                               x(0),
                               "yellow" === s ? h.drawImage(o, 0, 0) : "mint" === s ? h.drawImage(i, 0, 0) : "pink" === s ? h.drawImage(b, 0, 0) : "blue" === s ? h.drawImage(u, 0, 0) : h.drawImage(o, 0, 0),
-                              h.drawImage(d, 0, 0),
+                              h.drawImage(d, 0, 0, 2014, 1277),
                               h.globalCompositeOperation = "source-over",
                               !t) {
                                   e.next = 42;
@@ -222,13 +222,17 @@ if (!self.__WB_pmw) {
                               F(t);
                           case 31:
                               v = e.sent,
+                              photoAspect = 780 / 866,
+                              sourceAspect = v.width / v.height,
                               -1,
                               x(-1),
                               h.shadowColor = "#000000",
                               h.shadowBlur = 20,
                               h.shadowOffsetX = 5,
                               h.shadowOffsetY = 5,
-                              h.drawImage(v, 140, 240, 810, 806),
+                              sourceAspect > photoAspect ? (cropWidth = v.height * photoAspect,
+                              h.drawImage(v, (v.width - cropWidth) / 2, 0, cropWidth, v.height, 168, 205, 780, 866)) : (cropHeight = v.width / photoAspect,
+                              h.drawImage(v, 0, (v.height - cropHeight) / 2, v.width, cropHeight, 168, 205, 780, 866)),
                               h.shadowBlur = 0,
                               h.shadowOffsetX = 0,
                               h.shadowOffsetY = 0;
@@ -241,8 +245,8 @@ if (!self.__WB_pmw) {
                               N = n,
                               h.font = "90px Nanum Pen Script",
                               C = k.measureText(N).width,
-                              p = 1530 - C / 2,
-                              f = 330,
+                              p = 1480 - C / 2,
+                              f = 314,
                               h.fillText(N, p, f),
                               h.globalCompositeOperation = "source-over",
                               0,
@@ -250,8 +254,8 @@ if (!self.__WB_pmw) {
                               S = c,
                               h.font = "90px Nanum Pen Script",
                               I = k.measureText(S).width,
-                              p = 1530 - I / 2,
-                              f = 410,
+                              p = 1480 - I / 2,
+                              f = 392,
                               h.fillText(c, p, f),
                               h.globalCompositeOperation = "source-over",
                               0,
@@ -259,9 +263,17 @@ if (!self.__WB_pmw) {
                               D = r,
                               h.font = "90px Nanum Pen Script",
                               P = k.measureText(D).width,
-                              p = 1530 - P / 2,
-                              f = 485,
+                              p = 1480 - P / 2,
+                              f = 470,
                               h.fillText(r, p, f),
+                              h.font = "90px Nanum Pen Script",
+                              R = phone,
+                              E = k.measureText(R).width,
+                              p = 1480 - E / 2,
+                              f = 548,
+                              h.fillText(phone, p, f),
+                              h.font = "70px Nanum Pen Script",
+                              h.fillText(issueDate, 475, 1140),
                               h.globalCompositeOperation = "source-over",
                               !a) {
                                   e.next = 79;
@@ -293,7 +305,7 @@ if (!self.__WB_pmw) {
                   ), e)
               }
               )));
-              return function(t, n, c, r, a, s) {
+              return function(t, n, c, r, a, s, phone, issueDate) {
                   return e.apply(this, arguments)
               }
           }()
@@ -352,6 +364,14 @@ if (!self.__WB_pmw) {
                 , $ = Object(u.a)(Z, 2)
                 , ee = $[0]
                 , te = $[1]
+                , phoneState = Object(c.useState)("")
+                , phoneStatePair = Object(u.a)(phoneState, 2)
+                , phone = phoneStatePair[0]
+                , setPhone = phoneStatePair[1]
+                , issueDateState = Object(c.useState)("")
+                , issueDateStatePair = Object(u.a)(issueDateState, 2)
+                , issueDate = issueDateStatePair[0]
+                , setIssueDate = issueDateStatePair[1]
                 , ne = Object(c.useState)("")
                 , ce = Object(u.a)(ne, 2)
                 , re = ce[0]
@@ -380,7 +400,7 @@ if (!self.__WB_pmw) {
                               switch (e.prev = e.next) {
                               case 0:
                                   return e.next = 2,
-                                  I(re, z, Q, ee, de, Y);
+                                  I(re, z, Q, ee, de, Y, phone, issueDate);
                               case 2:
                                   t = e.sent,
                                   le(t);
@@ -393,7 +413,7 @@ if (!self.__WB_pmw) {
                   }
                   )))()
               }
-              ), [j, re, z, Q, ee, de, Y]),
+              ), [j, re, z, Q, ee, de, Y, phone, issueDate]),
               Object(c.useEffect)((function() {
                   if (Y) {
                       M("yellow" === Y ? O : "mint" === Y ? m : "pink" === Y ? g : "blue" === Y ? w : O)
@@ -484,6 +504,33 @@ if (!self.__WB_pmw) {
                                   value: ee,
                                   onChange: function(e) {
                                       return te(e.target.value)
+                                  },
+                                  onKeyDown: function(e) {
+                                      return "Enter" === e.key
+                                  }
+                              }), Object(C.jsx)("input", {
+                                  type: "tel",
+                                  id: "form-control-phone",
+                                  className: "handwriting",
+                                  placeholder: "Phone",
+                                  autoComplete: "off",
+                                  maxLength: 10,
+                                  value: phone,
+                                  onChange: function(e) {
+                                      return setPhone(e.target.value)
+                                  },
+                                  onKeyDown: function(e) {
+                                      return "Enter" === e.key
+                                  }
+                              }), Object(C.jsx)("input", {
+                                  type: "text",
+                                  id: "form-control-date-of-issue",
+                                  className: "handwriting",
+                                  placeholder: "Date of issue",
+                                  autoComplete: "off",
+                                  value: issueDate,
+                                  onChange: function(e) {
+                                      return setIssueDate(e.target.value)
                                   },
                                   onKeyDown: function(e) {
                                       return "Enter" === e.key
