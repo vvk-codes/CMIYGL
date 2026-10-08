@@ -32,8 +32,12 @@
     <link href="./static/css/css2.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="./static/css/css3.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link href="./static/css/css4.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="./static/css/xpi7xha.css">
     <style>
         html {
@@ -195,19 +199,20 @@
 
         #id-copy {
             z-index: 103;
-            background-image: url(./images/copylayer.png)
+            background-image: url(./images/main.png)
         }
 
         .imageupload {
             display: block;
-            width: 19.2vw;
-            height: 21.35vw;
+            width: 19.4vw;
+            height: 21.6vw;
             background-color: transparent;
             border: 1px solid #000;
             position: absolute;
-            top: 5.2vw;
+            top: 5.1vw;
             left: 4.2vw;
-            font-size: 2vw
+            font-size: 2vw;
+            z-index: 0;
         }
 
         .imageuploaded {
@@ -217,8 +222,9 @@
             background-color: #fff;
             border: 1px solid #000;
             position: absolute;
-            top: 5.9vw;
-            left: 3.6vw;
+            top: 5.1vw;
+            left: 4.2vw;
+            z-index: 0;
             -webkit-transform: rotate(-1deg);
             -moz-transform: rotate(-1deg);
             -ms-transform: rotate(-1deg);
@@ -230,7 +236,8 @@
 
         #form-control-date-of-birth,
         #form-control-full-name,
-        #form-control-location {
+        #form-control-location,
+        #form-control-phone {
             position: absolute;
             z-index: 0;
             text-align: center;
@@ -243,30 +250,52 @@
         }
 
         #form-control-full-name {
-            top: 6.2vw;
-            right: 4.6vw;
-            width: 16vw
+            top: 6.1vw;
+            right: 4.3vw;
+            width: 18vw
         }
 
         #form-control-date-of-birth {
-            top: 8.1vw;
-            right: 4.6vw;
-            width: 14vw
+            top: 8vw;
+            right: 4.3vw;
+            width: 18vw
         }
 
         #form-control-location {
-            top: 10vw;
-            right: 4.6vw;
-            width: 14vw
+            top: 9.9vw;
+            right: 4.3vw;
+            width: 18vw
+        }
+
+        #form-control-phone {
+            top: 11.8vw;
+            right: 4.3vw;
+            width: 18vw
+        }
+
+        #form-control-date-of-issue {
+            position: absolute;
+            z-index: 0;
+            top: 26.7vw;
+            left: 11.8vw;
+            width: 12vw;
+            height: 2.3vw;
+            line-height: 2.3vw;
+            text-align: left;
+            background-color: transparent;
+            border: none;
+            font-size: 2vw;
+            outline: 0 !important
         }
 
         .signature-box {
             position: absolute;
             font-family: 'Rock Salt', cursive;
             right: 4.6vw;
-            top: 24.8vw;
+            top: 25vw;
             width: 20.5vw;
-            font-size: 1.5vw
+            font-size: 1.5vw;
+            z-index: 0;
         }
 
         .color-button {
@@ -283,9 +312,9 @@
             background: #68c9d2;
             transition: color .3s, background .3s;
             position: absolute;
-            top: 26.9vw;
+            top: 33vw;
             left: 4vw;
-            z-index: 0
+            z-index: 0;
         }
 
         .color-button:hover {
@@ -307,9 +336,9 @@
             background: #68c9d2;
             transition: color .3s, background .3s;
             position: absolute;
-            top: 26.9vw;
+            top: 33vw;
             left: 14.5vw;
-            z-index: 0
+            z-index: 0;
         }
 
         .submit-button:hover {
@@ -547,51 +576,60 @@
             }
 
             .imageupload {
-                width: 30.72vw;
-                height: 34.16vw;
+                width: 31.04vw;
+                height: 34.56vw;
                 left: 16.7vw;
                 top: 12.9vw;
                 font-size: 4vw
             }
 
-            .imageuploaded {
-                width: 32.48vw;
-                height: 32vw;
-                top: 13.7vw;
-                left: 15.6vw
-            }
+           
 
             #form-control-date-of-birth,
             #form-control-full-name,
-            #form-control-location {
+            #form-control-location,
+            #form-control-phone,
+            #form-control-date-of-issue {
                 font-size: 3.3vw;
                 height: 4vw;
                 line-height: 4vw
             }
 
             #form-control-full-name {
-                width: 25.6vw;
-                top: 14.6vw;
-                right: 17.6vw
+                width: 28.8vw;
+                top: 14.5vw;
+                right: 16.9vw
             }
 
             #form-control-date-of-birth {
-                width: 22.4vw;
-                top: 17.6vw;
-                right: 17.6vw
+                width: 28.8vw;
+                top: 17.5vw;
+                right: 16.9vw
             }
 
             #form-control-location {
-                width: 22.4vw;
-                top: 20.6vw;
-                right: 17.6vw
+                width: 28.8vw;
+                top: 20.5vw;
+                right: 16.9vw
+            }
+
+            #form-control-phone {
+                width: 28.8vw;
+                top: 23.5vw;
+                right: 16.9vw
+            }
+
+            #form-control-date-of-issue {
+                top: 47.3vw;
+                left: 28.9vw;
+                width: 19.2vw
             }
 
             .signature-box {
                 width: 32.8vw;
                 font-size: 2.4vw;
-                right: 16.6vw;
-                top: 44.5vw
+                right: 17.4vw;
+                top: 44.6vw
             }
 
             .color-button {
@@ -601,7 +639,7 @@
                 font-size: 3.5vw;
                 line-height: 3.5vw;
                 border-radius: 1vw;
-                top: 49.7vw;
+                top: 56.7vw;
                 left: 16.4vw
             }
 
@@ -612,7 +650,7 @@
                 font-size: 3.5vw;
                 line-height: 3.5vw;
                 border-radius: 1vw;
-                top: 49.7vw;
+                top: 56.7vw;
                 left: 51vw
             }
 
@@ -679,7 +717,10 @@
                         autocomplete="off" value=""><input type="text" id="form-control-date-of-birth"
                         class="handwriting" placeholder="Date Of Birth" autocomplete="off" maxlength="10"
                         value=""><input type="text" id="form-control-location" class="handwriting"
-                        placeholder="Location" autocomplete="off" value="">
+                        placeholder="Location" autocomplete="off" value=""><input type="tel"
+                        id="form-control-phone" class="handwriting" placeholder="Phone" autocomplete="off"
+                        maxlength="10" value=""><input type="text" id="form-control-date-of-issue"
+                        class="handwriting" placeholder="Date of issue" autocomplete="off" value="">
                     <div class="position-absolute cursor-pointer signature-box">Sign Here</div><button
                         class="text-uppercase letter-spaced color-button"><strong>Select Color</strong></button><button
                         class="text-uppercase letter-spaced submit-button"><strong>Get Your ID</strong></button>
