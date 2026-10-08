@@ -3,6 +3,7 @@
 
 # Added Input Box for Phone Number
 # Made Issue date customizable & changed its position
+# Fixed minor bugs
 <div align="center">
   <img src="/images/og.jpg" width="1200">
 </div>
